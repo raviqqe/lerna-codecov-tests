@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = bar;
 
 function bar() {
-    // TODO
+  // TODO
 }

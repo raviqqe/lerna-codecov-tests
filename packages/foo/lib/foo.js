@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = foo;
 
 function foo() {
-    // TODO
+  // TODO
 }
