@@ -9,4 +9,4 @@ jobs:
       - run: lerna bootstrap
       - run: lerna run build
       - run: lerna run test
-      - run: lerna exec -- sh -c 'codecov -F $LERNA_PACKAGE_NAME'
+      - run: lerna exec -- sh -c '"curl -fsSL https://codecov.io/bash | bash /dev/stdin -Z -F $LERNA_PACKAGE_NAME -f coverage/clover.xml"'
