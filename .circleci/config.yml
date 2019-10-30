@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:lts
+    steps:
+      - checkout
+      - run: npm install -g lerna
+      - run: lerna bootstrap
+      - run: lerna run build
+      - run: lerna run test
