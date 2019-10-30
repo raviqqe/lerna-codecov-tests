@@ -1,0 +1,7 @@
+flags:
+  - foo:
+      paths:
+        - packages/foo
+  - bar:
+      paths:
+        - packages/bar
