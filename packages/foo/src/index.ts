@@ -1,3 +1,3 @@
 export function foo(x: number): number {
-  return x + 42;
+  return x + 21 + 21;
 }
