@@ -5,8 +5,15 @@ jobs:
       - image: node:lts
     steps:
       - checkout
+      - run: |
+          git config --global user.email ci@gmail.com
+          git config --global user.name ci
+
+          git reset $(git merge-base origin/master HEAD)
+          git add -A
+          git commit -m squash
       - run: npm install -g lerna
       - run: lerna bootstrap
       - run: lerna run build
       - run: lerna run test
-      - run: lerna exec -- sh -c '"curl -fsSL https://codecov.io/bash | bash /dev/stdin -Z -F $LERNA_PACKAGE_NAME -f coverage/clover.xml"'
+      - run: lerna exec -- sh -c '"curl -fsSL https://codecov.io/bash | bash /dev/stdin -v -Z -F $LERNA_PACKAGE_NAME -f coverage/clover.xml"'
