@@ -5,13 +5,13 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "jest": "^24.9.0",
+    "jest": "^30.4.2",
     "typescript": "^3.6.4"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
-    "@types/jest": "^24.0.21",
-    "codecov": "^3.6.1"
+    "@types/jest": "^30.0.0",
+    "codecov": "^3.7.1"
   }
 }
